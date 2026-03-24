@@ -1,97 +1,145 @@
 # Edge-Enabled Drone Swarm for Disaster Response and Communication
 
-## Overview
+## Abstract
 
-Natural disasters often result in widespread disruption of communication infrastructure, making it extremely difficult to locate victims and coordinate emergency aid. In response to this critical challenge, we propose an intelligent, autonomous drone swarm system that integrates Edge AI, LoRa-based mesh communication, and passive mobile signal detection to enhance disaster response operations.
+Natural disasters often create environments where conventional search-and-rescue operations are slow, risky, and limited by damaged infrastructure. This project presents an autonomous drone swarm–based disaster response system designed to improve victim detection, localization, communication, and aid delivery in emergency scenarios. The system combines onboard edge intelligence, passive mobile signal sensing, and resilient long-range communication to operate effectively in infrastructure-compromised areas. Drones collaboratively gather visual data and wireless signal cues to identify potential victims and estimate their locations with associated confidence levels. Collected information is transmitted through a low-power mesh communication network and processed at a ground station, where it is stored, aggregated, and continuously updated. A centralized dashboard provides real-time situational awareness, enabling rescue teams to monitor victim status, drone activity, and operational progress. The system also supports targeted aid delivery based on processed location data, allowing rapid deployment of essential supplies. By integrating autonomous sensing, robust communication, and coordinated data management, the proposed system aims to reduce response time, enhance rescue efficiency, and support decision-making in large-scale disaster environments.
 
-## System Architecture
+## System Overview
 
-### Core Components
+### Key Objectives
+- Improve victim detection and localization in disaster zones
+- Enable communication in infrastructure-compromised areas
+- Support rapid aid delivery to identified locations
+- Reduce response time and enhance rescue efficiency
+- Provide real-time situational awareness to rescue teams
 
-1. **Edge AI Visual Detection**
-   - YOLOv5n lightweight convolutional neural network
-   - Deployed on edge devices: Jetson Nano or Raspberry Pi
-   - Offline inference for rapid situational awareness
-   - Real-time human detection capabilities
+## Core Components
 
-2. **Passive Mobile Signal Detection**
-   - RSSI (Received Signal Strength Indicator) analysis
-   - Path loss models and trilateration techniques
-   - Non-visual backup detection in low-visibility environments
-   - Estimates victim locations from mobile device signals
+### 1. Autonomous Drone Swarm
+- Multi-drone coordinated system with modular roles
+- Collaborative sensing and data gathering
+- Scalable architecture for varying disaster scales
 
-3. **LoRa-Based Mesh Communication**
-   - Low-power, long-range connectivity
-   - No reliance on internet or cellular infrastructure
-   - Flooding protocol for data relay across swarm
-   - Reliable inter-drone communication network
+### 2. Edge Intelligence
+- Onboard AI for real-time victim detection
+- Lightweight ML models for edge devices
+- Offline processing capabilities
 
-4. **Drone Swarm Coordination**
-   - Modular role assignment (mobile base station, search unit, aid delivery agent)
-   - Maximized efficiency and coverage
-   - Reduced redundancy through intelligent task allocation
-   - Scalable swarm architecture
+### 3. Passive Mobile Signal Sensing
+- RSSI analysis from mobile devices
+- Wireless signal cue detection
+- Location estimation with confidence levels
 
-5. **Payload Delivery System**
-   - Servo-controlled payload mechanism
-   - Precision supply delivery to victim locations
-   - Essential aid distribution capabilities
+### 4. Low-Power Mesh Communication
+- LoRa-based long-range connectivity
+- Infrastructure-independent operation
+- Reliable data transmission across swarm
 
-6. **Ground Station Dashboard**
-   - Web-based mission visualization
-   - Real-time telemetry monitoring
-   - System status display
-   - Centralized swarm command and control
+### 5. Ground Station Processing
+- Centralized data aggregation and storage
+- Continuous information updates
+- Mission coordination and management
+
+### 6. Dashboard & Situational Awareness
+- Real-time web-based visualization
+- Victim status monitoring
+- Drone activity tracking
+- Operational progress display
+- Decision support for rescue teams
+
+### 7. Targeted Aid Delivery
+- Autonomous payload delivery to victim locations
+- Precision-based supply distribution
+- Integration with location confidence data
 
 ## Key Features
 
-✅ **Autonomous Operation** - Offline-capable swarm coordination without internet dependency
+✅ **Infrastructure-Independent** - Operates in areas with damaged communication infrastructure
 
-✅ **Multi-Detection Strategy** - Combines visual and signal-based victim detection
+✅ **Collaborative Sensing** - Multi-drone coordination for enhanced detection accuracy
 
-✅ **Edge Intelligence** - Lightweight ML models for real-time on-device inference
+✅ **Edge Intelligence** - Real-time onboard AI processing without cloud dependency
 
-✅ **Scalability** - Modular architecture for expanding drone swarm size
+✅ **Multi-Modal Detection** - Combines visual and wireless signal analysis
 
-✅ **Long-Range Communication** - LoRa mesh networking for wide area coverage
+✅ **Resilient Communication** - Low-power mesh network for reliable data transmission
 
-✅ **Disaster-Ready** - Optimized for diverse terrains and challenging environments
+✅ **Confidence-Based Localization** - Associated confidence levels with victim location estimates
 
-✅ **Cost-Effective** - Uses affordable edge computing platforms (Raspberry Pi, Jetson Nano)
+✅ **Real-Time Situational Awareness** - Centralized dashboard for decision support
 
-## Use Cases
+✅ **Rapid Aid Deployment** - Automated supply delivery to identified victim locations
 
-- Search and rescue in earthquake-affected regions
-- Flood zone victim location and aid delivery
-- Post-hurricane communication and supply drops
-- Wildfire evacuation support and monitoring
-- Man-made disaster response coordination
+✅ **Disaster-Ready** - Optimized for large-scale emergency environments
+
+## System Architecture
+
+### Data Flow
+1. Drones gather visual and signal data
+2. Edge processing extracts victim information
+3. Data transmitted via mesh network
+4. Ground station aggregates and stores information
+5. Dashboard visualizes real-time status
+6. Rescue teams make informed decisions
+7. Targeted aid delivery executed
 
 ## Technology Stack
 
-- **Computer Vision**: YOLOv5n (Object Detection)
-- **Edge Computing**: NVIDIA Jetson Nano, Raspberry Pi
+- **Computer Vision**: Edge-based victim detection
+- **Signal Processing**: RSSI analysis and triangulation
+- **Edge Computing**: Jetson Nano, Raspberry Pi
 - **Communication**: LoRa mesh protocol
-- **Signal Processing**: RSSI analysis, trilateration
-- **Dashboard**: Web-based visualization
+- **Backend**: Data aggregation and management
+- **Frontend**: Web-based dashboard
 - **Robotics**: Autonomous drone coordination
+- **Autonomy**: Swarm intelligence algorithms
+
+## Use Cases
+
+- **Earthquake Response** - Search and rescue in collapsed structures
+- **Flood Zones** - Victim location and supply delivery in inundated areas
+- **Wildfire Zones** - Evacuation support and missing person location
+- **Hurricane Aftermath** - Communication and aid in damaged regions
+- **Man-Made Disasters** - Rapid response in industrial or urban incidents
 
 ## Getting Started
 
-(Add installation, setup, and usage instructions here)
+### Prerequisites
+- Multiple autonomous drones
+- Edge computing devices (Jetson Nano, Raspberry Pi)
+- LoRa communication modules
+- Mobile device signal detection equipment
+- Ground station server/PC
+- Network infrastructure for dashboard
+
+### Installation
+
+(Installation instructions coming soon)
+
+### Configuration
+
+(Configuration guide coming soon)
+
+### Deployment
+
+(Deployment guide coming soon)
+
+## Project Structure
+
+(Project structure and file descriptions coming soon)
 
 ## Contributing
 
-Contributions are welcome! Please read our contributing guidelines before submitting pull requests.
+We welcome contributions from researchers, developers, and disaster response professionals. Please see our contributing guidelines for more information.
 
 ## License
 
-(Specify your license here)
+(License information to be added)
 
-## Contact
+## Contact & Support
 
-For questions or collaborations, please reach out to the project maintainers.
+For questions, collaborations, or feedback, please reach out to the project maintainers.
 
 ---
 
-**Designed for scalability, offline operability, and adaptability to diverse terrains, this system offers a robust and cost-effective solution for life-saving search and rescue missions in regions devastated by natural or man-made disasters.**
+**Reducing response time. Enhancing rescue efficiency. Supporting critical decisions in large-scale disaster environments.**
